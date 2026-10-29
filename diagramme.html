@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Diagramme · Négocier avec des agents IA, avec des garde-fous</title>
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:3000px;height:2100px;overflow:hidden}
+body{position:relative;color:#f4fbfc;font-family:Inter,ui-sans-serif,"Segoe UI",sans-serif;
+background:radial-gradient(circle at 12% 10%,rgba(82,224,196,.16),transparent 900px),radial-gradient(circle at 88% 30%,rgba(107,184,255,.16),transparent 1000px),radial-gradient(circle at 50% 95%,rgba(245,202,115,.08),transparent 900px),linear-gradient(180deg,#08131f,#0a1724 50%,#07111b)}
+body::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.025) 2px,transparent 2px);background-size:84px 84px}
+.bar{position:absolute;left:0;right:0;top:0;height:16px;background:linear-gradient(90deg,#52e0c4,#8ff0dd 48%,#f5ca73)}
+.n{position:absolute;padding:30px 36px;border:2px solid rgba(166,210,223,.2);border-radius:36px;background:linear-gradient(160deg,#152e43,#0b1b29);box-shadow:0 40px 100px rgba(0,0,0,.35)}
+.eb{color:#52e0c4;font-size:30px;font-weight:850;letter-spacing:.14em;text-transform:uppercase}
+h1{position:absolute;left:80px;top:110px;font-size:104px;font-weight:900;letter-spacing:-.045em;line-height:1}
+h1 em{font-style:normal;color:#f5ca73}
+.t{font-size:46px;font-weight:850;letter-spacing:-.025em;line-height:1.1;margin-top:10px}
+.d{font-size:33px;color:#c3d5dc;line-height:1.3;margin-top:12px}
+.big{font-size:96px;font-weight:900;letter-spacing:-.05em;line-height:1}
+ul{padding-left:34px;margin-top:12px}li{font-size:30px;color:#c3d5dc;line-height:1.22;margin:4px 0}
+.gate{border-style:solid;border-width:2px 14px;border-radius:18px;background:linear-gradient(160deg,#1a3a40,#0d2026)}
+.orch{border:4px solid #52e0c4;box-shadow:0 0 90px rgba(82,224,196,.45),0 0 0 14px rgba(82,224,196,.08),0 40px 100px rgba(0,0,0,.35)}
+svg{position:absolute;inset:0;pointer-events:none}
+.lbl{font:850 38px Inter,sans-serif;letter-spacing:-.01em}
+</style></head><body>
+<div class="bar"></div>
+<p class="eb" style="position:absolute;left:84px;top:56px">Schéma conceptuel · Achats · Négociation fournisseurs</p>
+<h1>Négocier avec des agents IA,<br><em>avec des garde-fous</em></h1>
+<div class="n" style="left:1580px;top:40px;width:660px;height:270px;padding:26px 32px"><div class="eb" style="font-size:24px">Chez un grand distributeur</div><div class="big" style="color:#52e0c4">68 %</div><div class="d" style="margin-top:8px;font-size:31px">de contrats conclus par l'IA (objectif : 20 %)</div></div>
+<div class="n" style="left:2260px;top:40px;width:660px;height:270px;padding:26px 32px"><div class="eb" style="font-size:24px;color:#6bb8ff">Chez un grand distributeur</div><div class="big" style="color:#6bb8ff">75 %</div><div class="d" style="margin-top:8px;font-size:31px">des fournisseurs préfèrent négocier avec l'IA</div></div>
+
+<!-- principe -->
+<div class="n" style="left:80px;top:340px;width:1040px;height:330px"><div class="eb">Le principe</div><div class="t">Plus l'enjeu monte, plus l'humain reprend la main.</div><div class="d">Chaque agent a des objectifs, des limites et des règles écrites, plutôt qu'un prompt parfait. Tout est journalisé pour l'audit.</div></div>
+
+<!-- règles -->
+<div class="n" style="left:1300px;top:330px;width:1620px;height:390px;padding:24px 30px;border-color:rgba(245,202,115,.35)">
+<div class="eb" style="color:#f5ca73">Protocoles d'agent · fournis à l'orchestrateur et à chaque agent</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;margin-top:6px">
+<div><div class="t" style="color:#52e0c4;font-size:40px">✓ Toujours faire</div><ul><li>Journaliser chaque décision</li><li>Rester dans le mandat</li><li>Citer la clause source</li><li>Escalader si doute</li></ul></div>
+<div><div class="t" style="color:#f5ca73;font-size:40px">? Demander d'abord</div><ul><li>Concession hors grille</li><li>Nouveau type de clause</li><li>Montant au-dessus du seuil</li><li>Fournisseur en litige</li></ul></div>
+<div><div class="t" style="color:#ff7e8b;font-size:40px">✕ Ne jamais faire</div><ul><li>Signer seul un accord clé</li><li>Modifier un contrat sans trace</li><li>Partager des données privées</li><li>Contourner une limite</li></ul></div>
+</div></div>
+
+<!-- recevoir -->
+<div class="n" style="left:80px;top:880px;width:400px;height:340px"><div class="eb">01 · Entrées</div><div class="t">Dossier fournisseur</div><div class="d">Contrats, historique de prix, objectifs et limites</div></div>
+<!-- orchestrateur -->
+<div class="n orch" style="left:600px;top:830px;width:520px;height:440px"><div class="eb">02 · Qualifier</div><div class="t" style="font-size:58px">Agent orchestrateur</div><div class="d">Classe chaque dossier par niveau de risque et l'oriente vers la bonne zone</div></div>
+
+<!-- lanes: agents x1300-2150, gates x2290-2920 -->
+<div class="n" style="left:1300px;top:740px;width:850px;height:250px;border-left:10px solid #52e0c4"><div class="eb">03 · 70 % · Faible risque</div><div class="t">Agent de négociation autonome</div><div class="d">Négocie seul, dans des limites écrites</div></div>
+<div class="n gate" style="left:2290px;top:740px;width:630px;height:250px;border-color:#52e0c4"><div class="eb">Contrôle humain</div><div class="t" style="font-size:40px">Un humain relit un échantillon chaque semaine</div></div>
+
+<div class="n" style="left:1300px;top:1020px;width:850px;height:250px;border-left:10px solid #6bb8ff"><div class="eb" style="color:#6bb8ff">03 · 20 % · Complexe</div><div class="t">Agents juridique, finance, logistique, conformité</div><div class="d">+ un agent de synthèse</div></div>
+<div class="n gate" style="left:2290px;top:1020px;width:630px;height:250px;border-color:#6bb8ff"><div class="eb" style="color:#6bb8ff">Contrôle humain</div><div class="t" style="font-size:40px">L'acheteur senior valide avant l'envoi</div></div>
+
+<div class="n" style="left:1300px;top:1300px;width:850px;height:250px;border-left:10px solid #f5ca73"><div class="eb" style="color:#f5ca73">03 · 10 % · Stratégique</div><div class="t">Agent de préparation</div><div class="d">L'IA prépare les scénarios et simulations</div></div>
+<div class="n gate" style="left:2290px;top:1300px;width:630px;height:250px;border-color:#f5ca73"><div class="eb" style="color:#f5ca73">Contrôle humain</div><div class="t" style="font-size:40px">Le comité décide</div></div>
+
+<!-- gros montants -->
+<div class="n" style="left:1300px;top:1580px;width:1620px;height:110px;padding:0 36px;display:flex;align-items:center;gap:24px;border:4px dashed #ff866e;background:linear-gradient(90deg,rgba(255,134,110,.22),rgba(255,134,110,.08))"><span style="font-size:40px;font-weight:900;color:#ff866e;letter-spacing:.04em">GROS MONTANTS</span><span style="font-size:36px;font-weight:700">validation humaine obligatoire, quelle que soit la zone</span></div>
+
+<!-- évaluer -->
+<div class="n" style="left:1300px;top:1770px;width:1620px;height:240px;border:3px solid #f5ca73"><div class="eb" style="color:#f5ca73">04 · Évaluer</div><div class="t">Agent d'évaluation</div><div class="d">Mesure conclusion, délais, écarts de prix, avis fournisseurs ; propose d'ajuster les seuils</div></div>
+
+<!-- footer left -->
+<div style="position:absolute;left:80px;top:1920px;width:1150px"><div style="font-size:30px;color:#a8bec8">Schéma conceptuel — proposition de conception, non issue d'un système réel d'entreprise.</div><div style="font-size:40px;font-weight:850;margin-top:14px">Didier Lioniello · <span style="color:#52e0c4">Applied AI Architect</span></div></div>
+
+<svg viewBox="0 0 3000 2100" width="3000" height="2100">
+<defs>
+<marker id="mt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52e0c4"/></marker>
+<marker id="mb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6bb8ff"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f5ca73"/></marker>
+<marker id="mw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#a8bec8"/></marker>
+</defs>
+<g fill="none" stroke-width="10" stroke-linecap="round">
+<path d="M480 1050H585" stroke="#a8bec8" marker-end="url(#mw)"/>
+<path d="M1120 990C1200 990 1200 865 1285 865" stroke="#52e0c4" marker-end="url(#mt)"/>
+<path d="M1120 1100C1200 1100 1200 1145 1285 1145" stroke="#6bb8ff" marker-end="url(#mb)"/>
+<path d="M1120 1200C1200 1200 1200 1425 1285 1425" stroke="#f5ca73" marker-end="url(#mg)"/>
+<path d="M2150 865H2275" stroke="#52e0c4" marker-end="url(#mt)"/>
+<path d="M2150 1145H2275" stroke="#6bb8ff" marker-end="url(#mb)"/>
+<path d="M2150 1425H2275" stroke="#f5ca73" marker-end="url(#mg)"/>
+<path d="M1300 700C1060 700 960 720 960 812" stroke="#f5ca73" marker-end="url(#mg)"/>
+<path d="M1725 1690V1758M2380 1690V1758M2780 1690V1758" stroke="#a8bec8" stroke-width="7" marker-end="url(#mw)"/>
+<path d="M1300 1890H860V1290" stroke="#f5ca73" stroke-dasharray="26 18" marker-end="url(#mg)"/>
+</g>
+<text class="lbl" x="1150" y="900" fill="#52e0c4">70 %</text>
+<text class="lbl" x="1170" y="1090" fill="#6bb8ff">20 %</text>
+<text class="lbl" x="1150" y="1400" fill="#f5ca73">10 %</text>
+<text class="lbl" x="880" y="1470" fill="#f5ca73">↺ ajuste seuils et</text>
+<text class="lbl" x="880" y="1520" fill="#f5ca73">répartition, validé</text><text class="lbl" x="880" y="1570" fill="#f5ca73">par un humain</text>
+<text x="2410" y="1738" fill="#a8bec8" style="font:700 30px Inter">résultats</text>
+</svg>
+</body></html>

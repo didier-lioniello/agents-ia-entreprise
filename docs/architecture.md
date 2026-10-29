@@ -1,6 +1,6 @@
 # Architecture du système
 
-Proposition de conception de Didier Lioniello (Applied AI Architect). Ce n'est pas l'architecture réelle de Walmart.
+Proposition de conception de Didier Lioniello (Applied AI Architect). Ce n'est pas l'architecture réelle d'une entreprise.
 
 ## Composants
 

@@ -6,9 +6,11 @@
 
 ## Cas de départ
 
-Chez Walmart, une IA négocie les contrats fournisseurs : l'objectif était de conclure 20 % des contrats ; l'IA en a conclu 68 %, et 75 % des fournisseurs ont préféré négocier avec elle, car c'était plus rapide.
+Chez un grand distributeur, une IA négocie les contrats fournisseurs : l'objectif était de conclure 20 % des contrats ; l'IA en a conclu 68 %, et 75 % des fournisseurs ont préféré négocier avec elle, car c'était plus rapide.
 
-La répartition par niveau de risque 70 / 20 / 10, les trois listes de règles (toujours faire, demander d'abord, ne jamais faire) et l'ensemble du workflow sont **une proposition de conception de Didier Lioniello (Applied AI Architect)**, pas l'architecture réelle de Walmart, qui n'est pas publique.
+La répartition par niveau de risque 70 / 20 / 10, les trois listes de règles (toujours faire, demander d'abord, ne jamais faire) et l'ensemble du workflow sont **une proposition de conception de Didier Lioniello (Applied AI Architect)**, pas l'architecture réelle d'une entreprise, qui n'est pas publique.
+
+Diagramme principal (rendu fidèle du Mermaid ci-dessous) : [schema-agents-ia-diagramme.png](schema-agents-ia-diagramme.png) (3000×2100), [version 1400](schema-agents-ia-diagramme-1400.png), source [diagramme.html](diagramme.html).
 
 Visuel carré LinkedIn : [schema-agents-ia-linkedin.png](schema-agents-ia-linkedin.png) (2400×2400) et [version 1200×1200](schema-agents-ia-linkedin-1200.png).
 

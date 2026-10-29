@@ -11,15 +11,36 @@
 <script src="app.js" defer></script>
 </head>
 <body>
-<div class="banner">PROPOSITION DE CONCEPTION · NON ISSUE D'UN SYSTÈME WALMART · AUCUN RÉSULTAT MESURÉ REVENDIQUÉ</div>
+<div class="banner">PROPOSITION DE CONCEPTION · NON ISSUE D'UN SYSTÈME RÉEL D'ENTREPRISE · AUCUN RÉSULTAT MESURÉ REVENDIQUÉ</div>
+<div class="diagram-wrap" id="schema">
+<a href="schema-agents-ia-diagramme.png" class="diagram-frame" title="Ouvrir en pleine résolution (3000 × 2100)"><img src="schema-agents-ia-diagramme-1400.png" srcset="schema-agents-ia-diagramme-1400.png 1400w, schema-agents-ia-diagramme.png 3000w" sizes="(max-width: 1540px) 100vw, 1500px" width="1400" height="980" loading="eager" fetchpriority="high" alt="Diagramme : le dossier fournisseur et les protocoles d'agent entrent dans l'agent orchestrateur, qui répartit les dossiers en trois zones : 70 % faible risque (agent autonome, un humain relit un échantillon chaque semaine), 20 % complexe (agents juridique, finance, logistique, conformité et synthèse, l'acheteur senior valide), 10 % stratégique (l'IA prépare les scénarios, le comité décide). Les gros montants exigent une validation humaine dans toutes les zones. L'agent d'évaluation mesure les résultats et ajuste seuils et répartition, validé par un humain."></a>
+</div>
 <header class="shell">
 <nav class="nav" aria-label="Navigation principale">
 <a class="brand" href="#top"><span class="brand-mark">IA</span>Agents IA en entreprise</a>
-<div class="nav-links"><a href="#chiffres">Chiffres</a><a href="#schema">Schéma</a><a href="#architecture">Architecture</a><a href="#flux">Flux</a><a href="#post">Post</a><a href="#limites">Limites</a></div>
+<div class="nav-links"><a href="#schema">Schéma</a><a href="#mermaid">Mermaid</a><a href="#chiffres">Chiffres</a><a href="#architecture">Architecture</a><a href="#flux">Flux</a><a href="#post">Post</a><a href="#limites">Limites</a></div>
 </nav>
 </header>
 <main class="shell" id="top">
-<section class="hero">
+<section id="mermaid" aria-labelledby="h-mermaid">
+<div class="section-head"><p class="eyebrow">Source</p><h2 id="h-mermaid">Version Mermaid (source du diagramme)</h2><p>Le diagramme ci-dessus est le rendu fidèle de ce flowchart. Détail : <a href="https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia.md">schema-agents-ia.md</a> · <a href="schema-agents-ia-diagramme.png">PNG 3000 × 2100</a> · <a href="schema-agents-ia-diagramme-1400.png">PNG 1400</a> · <a href="schema-agents-ia-linkedin.png">visuel carré LinkedIn</a></p></div>
+<pre class="card code">flowchart TD
+    A[Entrées : contrats, historique de prix, objectifs et limites] --&gt; O[Agent orchestrateur : classe chaque dossier par niveau de risque]
+    R[Protocoles d&#x27;agent : toujours faire / demander d&#x27;abord / ne jamais faire] --&gt; O
+    O --&gt;|70 % faible risque| L1[Agent de négociation autonome]
+    O --&gt;|20 % complexe inter-services| L2[Agents juridique, finance, chaîne d&#x27;approvisionnement, conformité + agent de synthèse]
+    O --&gt;|10 % stratégique| L3[Agent de préparation : scénarios et simulations]
+    L1 --&gt; H1{{Contrôle humain : échantillon hebdomadaire et alerte de seuil}}
+    L2 --&gt; H2{{Contrôle humain : validation de l&#x27;acheteur senior avant envoi}}
+    L3 --&gt; H3{{Contrôle humain : le comité décide}}
+    G{{Gros montants : validation humaine obligatoire, quelle que soit la zone}} -.-&gt; H1 &amp; H2 &amp; H3
+    H1 --&gt; E[Agent d&#x27;évaluation : taux de conclusion, délais, écarts de prix, avis fournisseurs]
+    H2 --&gt; E
+    H3 --&gt; E
+    E --&gt;|ajuste seuils et répartition, validé par un humain| O
+</pre>
+</section>
+<section class="hero slim">
 <p class="eyebrow">Architecture d'agents IA · Achats</p>
 <h1>Négocier avec des agents IA, <em>avec des garde-fous.</em></h1>
 <p class="lead">Un orchestrateur classe chaque dossier fournisseur par niveau de risque. Plus l'enjeu monte, plus l'humain reprend la main. Des objectifs, des limites et des règles écrites, plutôt que le prompt parfait.</p>
@@ -27,9 +48,9 @@
 </section>
 
 <section id="chiffres" aria-labelledby="h-chiffres">
-<div class="section-head"><p class="eyebrow">Vue d'ensemble</p><h2 id="h-chiffres">Les chiffres du marché et du modèle</h2><p>Le point de départ : chez Walmart, une IA négocie déjà des contrats fournisseurs.</p></div>
+<div class="section-head"><p class="eyebrow">Vue d'ensemble</p><h2 id="h-chiffres">Les chiffres du marché et du modèle</h2><p>Le point de départ : chez un grand distributeur, une IA négocie déjà des contrats fournisseurs.</p></div>
 <div class="grid g2">
-<article class="card"><span class="kpi-label">Contrats conclus par l'IA</span><span class="kpi teal">68 %</span><div class="bar"><i class="t w68"></i></div><div class="bar-legend"><span>objectif initial : 20 %</span><span>atteint : 68 %</span></div><p>Chez Walmart, l'IA a conclu plus de trois fois plus de contrats que l'objectif fixé.</p></article>
+<article class="card"><span class="kpi-label">Contrats conclus par l'IA</span><span class="kpi teal">68 %</span><div class="bar"><i class="t w68"></i></div><div class="bar-legend"><span>objectif initial : 20 %</span><span>atteint : 68 %</span></div><p>Chez un grand distributeur, l'IA a conclu plus de trois fois plus de contrats que l'objectif fixé.</p></article>
 <article class="card"><span class="kpi-label">Fournisseurs qui préfèrent l'IA</span><span class="kpi blue">75 %</span><div class="bar"><i class="b w75"></i></div><div class="bar-legend"><span>0 %</span><span>100 %</span></div><p>Trois fournisseurs sur quatre préfèrent négocier avec elle, parce que c'est plus rapide.</p></article>
 </div>
 <div class="grid g4 mt18">
@@ -40,14 +61,6 @@
 </div>
 </section>
 
-<section id="schema" aria-labelledby="h-schema">
-<div class="section-head"><p class="eyebrow">Le schéma</p><h2 id="h-schema">Le visuel complet</h2></div>
-<figure class="card figure">
-<img src="schema-agents-ia-linkedin-1200.png" width="1200" height="1200" loading="lazy" alt="Schéma : un orchestrateur répartit les dossiers fournisseurs en trois zones de risque (70 % autonome, 20 % validé par un acheteur senior, 10 % décidé par un comité), avec trois listes de règles, une validation humaine pour les gros montants et un agent d'évaluation qui boucle sur l'orchestrateur.">
-<figcaption>Workflow d'agents IA de négociation fournisseurs, supervisé par niveau de risque. Proposition de conception de Didier Lioniello.</figcaption>
-<div class="links"><a class="btn" href="schema-agents-ia-linkedin.png">Version 2400 × 2400</a><a class="btn" href="schema-agents-ia-linkedin-1200.png">Version 1200 × 1200</a><a class="btn" href="https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia.md">Détail et Mermaid</a></div>
-</figure>
-</section>
 
 <section id="architecture" aria-labelledby="h-archi">
 <div class="section-head"><p class="eyebrow">Architecture du système</p><h2 id="h-archi">Un orchestrateur, trois zones, un contrôle humain par zone</h2><p>L'agent orchestrateur reçoit les entrées (contrats, historique de prix, objectifs et limites) et classe chaque dossier par niveau de risque avant de l'orienter.</p></div>
@@ -97,7 +110,7 @@
 <div class="section-head"><p class="eyebrow">Post LinkedIn</p><h2 id="h-post">Le texte qui accompagne le visuel</h2></div>
 <article class="card">
 <div class="post-head"><span class="pill gold">Brouillon, non publié</span><button class="btn" id="copy-post" type="button">Copier le texte</button></div>
-<pre class="post" id="post-text">Chez Walmart, une IA négocie les contrats fournisseurs : 68 % de contrats conclus alors que l'objectif était de 20 %, et 75 % des fournisseurs préfèrent négocier avec elle, parce que c'est plus rapide.
+<pre class="post" id="post-text">Chez un grand distributeur, une IA négocie les contrats fournisseurs : 68 % de contrats conclus alors que l'objectif était de 20 %, et 75 % des fournisseurs préfèrent négocier avec elle, parce que c'est plus rapide.
 
 C'est impressionnant. Mais je ne confierais pas tous les contrats au même agent.
 
@@ -113,7 +126,7 @@ Voici l'architecture que je propose :
 
 Des objectifs, des limites et des règles, plutôt que le prompt parfait.
 
-Précision honnête : ce schéma est une proposition de conception, pas l'architecture de Walmart, et je n'ai pas de résultats mesurés pour lui.
+Précision honnête : ce schéma est une proposition de conception, pas l'architecture d'une entreprise réelle, et je n'ai pas de résultats mesurés pour lui.
 
 Et chez vous, quelle part des décisions pourrait passer en autonomie demain, avec quelles limites écrites ?
 
@@ -127,7 +140,7 @@ Didier Lioniello · Applied AI Architect</pre>
 <div class="section-head"><p class="eyebrow">Limites et honnêteté</p><h2 id="h-limites">Ce que ce livrable est, et n'est pas</h2></div>
 <div class="grid g3">
 <article class="card"><h3 class="teal">C'est</h3><p>Une proposition de conception de Didier Lioniello, Applied AI Architect : une manière de répartir l'autonomie des agents selon le risque.</p></article>
-<article class="card"><h3 class="coralc">Ce n'est pas</h3><p>L'architecture réelle de Walmart, qui n'est pas publique. Seuls les deux chiffres de départ concernent Walmart.</p></article>
+<article class="card"><h3 class="coralc">Ce n'est pas</h3><p>L'architecture réelle d'un grand distributeur, qui n'est pas publique. Seuls les deux chiffres de départ concernent la grande distribution.</p></article>
 <article class="card"><h3 class="goldc">À tester</h3><p>Aucun résultat mesuré n'est revendiqué. La répartition 70 / 20 / 10 et les seuils sont des hypothèses à valider sur des données réelles.</p></article>
 </div>
 </section>

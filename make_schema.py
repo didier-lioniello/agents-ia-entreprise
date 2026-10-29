@@ -28,7 +28,7 @@ def arrow(x1,y1,x2,y2,col="#444"):
     for s in (-0.5,0.5):
         d.line((x2,y2,x2-L*math.cos(a+s),y2-L*math.sin(a+s)),fill=col,width=5)
 d.text((50,28),"Négociation fournisseurs avec des agents IA : version supervisée par niveau de risque",font=f(38,True),fill="#0B2545")
-d.text((50,80),"Proposition de Didier Lioniello à partir du cas Walmart : 68 % de contrats conclus par l'IA, contre 20 % visés.",font=f(23),fill="#444")
+d.text((50,80),"Proposition de Didier Lioniello à partir du cas de départ : 68 % de contrats conclus par l'IA, contre 20 % visés.",font=f(23),fill="#444")
 # input
 box(50,130,560,150,"1. Entrées","Contrats fournisseurs, historique de prix, objectifs métier et limites (marge, délais, clauses).","#E8F0FE","#3B6FD4")
 box(720,130,560,150,"2. Agent orchestrateur","Lit l'objectif, classe chaque dossier par niveau de risque, attribue l'agent et fixe le point de contrôle.","#FFF4D6","#D9A400")
@@ -62,7 +62,7 @@ for i,(t,b,c) in enumerate(cols):
     for l in wrap(b,f(20),590): d.text((x,ty),l,font=f(20),fill="#222"); ty+=28
 # bottom loop
 box(50,1360,900,160,"3. Agent d'évaluation (boucle d'amélioration)","Mesure le taux de contrats conclus, les délais, les écarts de prix et l'avis des fournisseurs. Propose d'ajuster les seuils et la répartition 70 / 20 / 10, toujours validé par un humain.","#E8F0FE","#3B6FD4",bs=20)
-box(1000,1360,950,160,"Ce qui s'améliore par rapport au cas Walmart","Les décisions à fort enjeu restent humaines, tout est tracé, les seuils sont revus par des mesures, et chaque agent a un mandat écrit plutôt qu'une consigne parfaite.","#E3F6E8","#2E9B54",bs=20)
+box(1000,1360,950,160,"Ce qui s'améliore par rapport au cas de départ","Les décisions à fort enjeu restent humaines, tout est tracé, les seuils sont revus par des mesures, et chaque agent a un mandat écrit plutôt qu'une consigne parfaite.","#E3F6E8","#2E9B54",bs=20)
 arrow(1000,1330,500,1360,"#444"); 
-d.text((50,1530),"Schéma de proposition, pas l'architecture réelle de Walmart. Proposition de conception de Didier Lioniello (Applied AI Architect).",font=f(18),fill="#666")
+d.text((50,1530),"Schéma de proposition, pas l'architecture réelle d'une entreprise. Proposition de conception de Didier Lioniello (Applied AI Architect).",font=f(18),fill="#666")
 img.save("schema-agents-ia.png")

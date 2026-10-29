@@ -2,11 +2,11 @@
 
 **Statut : brouillon, non publié.** Didier publie lui-même l'image et le texte.
 
-Liens directs : visuel https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia-linkedin.png · version 1200×1200 https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia-linkedin-1200.png · détail du schéma https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia.md
+Liens directs : diagramme https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia-diagramme.png · visuel https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia-linkedin.png · version 1200×1200 https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia-linkedin-1200.png · détail du schéma https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia.md
 
 ---
 
-Chez Walmart, une IA négocie les contrats fournisseurs : 68 % de contrats conclus alors que l'objectif était de 20 %, et 75 % des fournisseurs préfèrent négocier avec elle, parce que c'est plus rapide.
+Chez un grand distributeur, une IA négocie les contrats fournisseurs : 68 % de contrats conclus alors que l'objectif était de 20 %, et 75 % des fournisseurs préfèrent négocier avec elle, parce que c'est plus rapide.
 
 C'est impressionnant. Mais je ne confierais pas tous les contrats au même agent.
 
@@ -22,7 +22,7 @@ Voici l'architecture que je propose :
 
 Des objectifs, des limites et des règles, plutôt que le prompt parfait.
 
-Précision honnête : ce schéma est une proposition de conception, pas l'architecture de Walmart, et je n'ai pas de résultats mesurés pour lui.
+Précision honnête : ce schéma est une proposition de conception, pas l'architecture d'une entreprise réelle, et je n'ai pas de résultats mesurés pour lui.
 
 Et chez vous, quelle part des décisions pourrait passer en autonomie demain, avec quelles limites écrites ?
 
