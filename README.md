@@ -11,7 +11,7 @@ La page [`index.html`](index.html) est statique : pas d'API, pas de CDN, pas de 
 
 ![Diagramme : négocier avec des agents IA, avec des garde-fous](schema-agents-ia-diagramme.png)
 
-Diagramme complet : [`schema-agents-ia-diagramme.png`](schema-agents-ia-diagramme.png) (3000 × 2100) · [version 1400](schema-agents-ia-diagramme-1400.png) · source [`diagramme.html`](diagramme.html). Aperçu de la page : [`docs/apercu.png`](docs/apercu.png).
+Diagramme complet : [`schema-agents-ia-diagramme.png`](schema-agents-ia-diagramme.png) (3000 × 2100) · [version 1400](schema-agents-ia-diagramme-1400.png) · source [`diagramme.html`](diagramme.html).
 
 ## Vue d'ensemble
 
@@ -67,19 +67,16 @@ google-chrome --headless=new --hide-scrollbars --window-size=1200,1200 \
   --force-device-scale-factor=2 --screenshot=schema-agents-ia-linkedin.png infographic.html
 ```
 
-`make_schema.py` (Pillow) régénère l'ancienne figure rectangulaire `schema-agents-ia.png`.
-
 ## Organisation du dépôt
 
 ```text
 index.html, styles.css, app.js     page de présentation
 schema-agents-ia-diagramme*.png    diagramme principal (3000 × 2100 et 1400)
 schema-agents-ia-linkedin*.png     visuel carré (2400 et 1200)
-schema-agents-ia.png               figure rectangulaire
-diagramme.html, infographic.html, make_schema.py   sources des visuels
+diagramme.html, infographic.html   sources des visuels
 schema-agents-ia.md                détail du schéma et Mermaid
 post-linkedin-schema.md            texte du post LinkedIn (brouillon)
-docs/                              architecture, flux, règles, aperçu
+docs/                              architecture, flux, règles
 ```
 
 ## Limites connues

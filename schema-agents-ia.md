@@ -2,7 +2,7 @@
 
 **Statut : brouillon, rien n'est publié.**
 
-![Schéma des agents IA](schema-agents-ia.png)
+![Schéma des agents IA](schema-agents-ia-diagramme-1400.png)
 
 ## Cas de départ
 
