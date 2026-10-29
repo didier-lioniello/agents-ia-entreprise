@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08131f">
+<meta name="description" content="Agents IA en entreprise : proposition d'architecture de négociation fournisseurs supervisée par niveau de risque (70/20/10), avec règles écrites, validation humaine et agent d'évaluation. Par Didier Lioniello.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Agents IA en entreprise · Négociation fournisseurs supervisée</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<div class="banner">PROPOSITION DE CONCEPTION · NON ISSUE D'UN SYSTÈME WALMART · AUCUN RÉSULTAT MESURÉ REVENDIQUÉ</div>
+<header class="shell">
+<nav class="nav" aria-label="Navigation principale">
+<a class="brand" href="#top"><span class="brand-mark">IA</span>Agents IA en entreprise</a>
+<div class="nav-links"><a href="#chiffres">Chiffres</a><a href="#schema">Schéma</a><a href="#architecture">Architecture</a><a href="#flux">Flux</a><a href="#post">Post</a><a href="#limites">Limites</a></div>
+</nav>
+</header>
+<main class="shell" id="top">
+<section class="hero">
+<p class="eyebrow">Architecture d'agents IA · Achats</p>
+<h1>Négocier avec des agents IA, <em>avec des garde-fous.</em></h1>
+<p class="lead">Un orchestrateur classe chaque dossier fournisseur par niveau de risque. Plus l'enjeu monte, plus l'humain reprend la main. Des objectifs, des limites et des règles écrites, plutôt que le prompt parfait.</p>
+<div class="tags"><span class="pill">Orchestrateur</span><span class="pill">Zones 70 / 20 / 10</span><span class="pill gold">Validation humaine</span><span class="pill coral">Agent d'évaluation</span></div>
+</section>
+
+<section id="chiffres" aria-labelledby="h-chiffres">
+<div class="section-head"><p class="eyebrow">Vue d'ensemble</p><h2 id="h-chiffres">Les chiffres du marché et du modèle</h2><p>Le point de départ : chez Walmart, une IA négocie déjà des contrats fournisseurs.</p></div>
+<div class="grid g2">
+<article class="card"><span class="kpi-label">Contrats conclus par l'IA</span><span class="kpi teal">68 %</span><div class="bar"><i class="t w68"></i></div><div class="bar-legend"><span>objectif initial : 20 %</span><span>atteint : 68 %</span></div><p>Chez Walmart, l'IA a conclu plus de trois fois plus de contrats que l'objectif fixé.</p></article>
+<article class="card"><span class="kpi-label">Fournisseurs qui préfèrent l'IA</span><span class="kpi blue">75 %</span><div class="bar"><i class="b w75"></i></div><div class="bar-legend"><span>0 %</span><span>100 %</span></div><p>Trois fournisseurs sur quatre préfèrent négocier avec elle, parce que c'est plus rapide.</p></article>
+</div>
+<div class="grid g4 mt18">
+<article class="card"><span class="kpi-label">Zones de risque</span><span class="kpi sm teal">3</span><p>70 % faible, 20 % complexe, 10 % stratégique.</p></article>
+<article class="card"><span class="kpi-label">Étapes</span><span class="kpi sm blue">4</span><p>Recevoir, qualifier, négocier, évaluer.</p></article>
+<article class="card"><span class="kpi-label">Listes de règles</span><span class="kpi sm goldc">3</span><p>Toujours faire, demander d'abord, ne jamais faire.</p></article>
+<article class="card"><span class="kpi-label">Validation obligatoire</span><span class="kpi sm coralc">1</span><p>Gros montants : un humain valide, quelle que soit la zone.</p></article>
+</div>
+</section>
+
+<section id="schema" aria-labelledby="h-schema">
+<div class="section-head"><p class="eyebrow">Le schéma</p><h2 id="h-schema">Le visuel complet</h2></div>
+<figure class="card figure">
+<img src="schema-agents-ia-linkedin-1200.png" width="1200" height="1200" loading="lazy" alt="Schéma : un orchestrateur répartit les dossiers fournisseurs en trois zones de risque (70 % autonome, 20 % validé par un acheteur senior, 10 % décidé par un comité), avec trois listes de règles, une validation humaine pour les gros montants et un agent d'évaluation qui boucle sur l'orchestrateur.">
+<figcaption>Workflow d'agents IA de négociation fournisseurs, supervisé par niveau de risque. Proposition de conception de Didier Lioniello.</figcaption>
+<div class="links"><a class="btn" href="schema-agents-ia-linkedin.png">Version 2400 × 2400</a><a class="btn" href="schema-agents-ia-linkedin-1200.png">Version 1200 × 1200</a><a class="btn" href="https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia.md">Détail et Mermaid</a></div>
+</figure>
+</section>
+
+<section id="architecture" aria-labelledby="h-archi">
+<div class="section-head"><p class="eyebrow">Architecture du système</p><h2 id="h-archi">Un orchestrateur, trois zones, un contrôle humain par zone</h2><p>L'agent orchestrateur reçoit les entrées (contrats, historique de prix, objectifs et limites) et classe chaque dossier par niveau de risque avant de l'orienter.</p></div>
+<div class="grid g3">
+<article class="card zone t"><span class="kpi-label">Faible risque</span><span class="kpi sm teal">70 %</span><div class="bar"><i class="t w70"></i></div><h3 data-mt>Agent de négociation autonome</h3><p>Il négocie seul, dans des limites écrites : mandat, plafonds, grille de concessions.</p><div class="check"><b>Contrôle humain :</b> un échantillon relu chaque semaine, alerte au dépassement de seuil.</div></article>
+<article class="card zone b"><span class="kpi-label">Complexe, inter-services</span><span class="kpi sm blue">20 %</span><div class="bar"><i class="b w20"></i></div><h3 data-mt>Agents spécialisés + synthèse</h3><p>Agents juridique, finance, logistique et conformité ; un agent de synthèse consolide leurs avis.</p><div class="check"><b>Contrôle humain :</b> l'acheteur senior valide la synthèse avant l'envoi.</div></article>
+<article class="card zone g"><span class="kpi-label">Stratégique</span><span class="kpi sm goldc">10 %</span><div class="bar"><i class="g w10"></i></div><h3 data-mt>Agent de préparation</h3><p>L'IA prépare les scénarios et les simulations, sans rien engager.</p><div class="check"><b>Contrôle humain :</b> le comité décide.</div></article>
+</div>
+<article class="card alert"><h3 class="red">Gros montants : validation humaine obligatoire</h3><p>Au-dessus du seuil défini, un humain valide, quelle que soit la zone d'origine du dossier.</p></article>
+<div class="grid g3 mt18">
+<article class="card"><h3 class="teal">Toujours faire</h3><ul class="rules"><li>Journaliser chaque décision et sa justification</li><li>Rester dans le mandat et les plafonds</li><li>Citer la clause source</li><li>Escalader si la confiance est basse</li></ul></article>
+<article class="card"><h3 class="goldc">Demander d'abord</h3><ul class="rules"><li>Toute concession hors grille</li><li>Tout nouveau type de clause</li><li>Tout montant au-dessus du seuil</li><li>Tout fournisseur sensible ou en litige</li></ul></article>
+<article class="card"><h3 class="red">Ne jamais faire</h3><ul class="rules"><li>Signer seul un accord stratégique</li><li>Modifier un contrat existant sans trace</li><li>Partager les données d'un fournisseur avec un autre</li><li>Contourner une limite</li></ul></article>
+</div>
+<article class="card mt18"><h3 class="goldc">Agent d'évaluation et boucle d'amélioration</h3><p>Il mesure le taux de conclusion, les délais, les écarts de prix et les avis fournisseurs, puis propose d'ajuster les seuils et la répartition entre zones. Un humain valide chaque ajustement avant qu'il ne revienne à l'orchestrateur.</p></article>
+</section>
+
+<section id="flux" aria-labelledby="h-flux">
+<div class="section-head"><p class="eyebrow">Flux de travail</p><h2 id="h-flux">Quatre étapes, de la réception à l'évaluation</h2></div>
+<ol class="timeline">
+<li class="card step"><span class="num">01</span><h3>Recevoir</h3><p>Contrats, historique de prix, objectifs et limites entrent dans le système.</p></li>
+<li class="card step"><span class="num">02</span><h3>Qualifier</h3><p>L'orchestrateur classe le dossier : faible risque, complexe ou stratégique.</p></li>
+<li class="card step"><span class="num">03</span><h3>Négocier</h3><p>L'agent de la zone agit dans ses règles ; le contrôle humain de la zone s'applique.</p></li>
+<li class="card step"><span class="num">04</span><h3>Évaluer</h3><p>L'agent d'évaluation mesure et propose des ajustements, validés par un humain.</p></li>
+</ol>
+<div class="card mt18">
+<h3>Le flux en diagramme</h3>
+<div class="flow" role="img" aria-label="Diagramme du flux : entrées et règles vers l'orchestrateur, trois zones avec contrôle humain, puis agent d'évaluation qui revient vers l'orchestrateur.">
+<div class="node">Entrées : contrats, historique de prix, objectifs et limites · Règles d'agent</div>
+<div class="arrow">↓</div>
+<div class="node o">Agent orchestrateur : classe chaque dossier par niveau de risque</div>
+<div class="arrow">↓</div>
+<div class="lanes">
+<div class="lane"><span class="tag teal">70 % faible risque</span><div class="node">Agent autonome</div><div class="node h">Échantillon hebdomadaire</div></div>
+<div class="lane"><span class="tag blue">20 % complexe</span><div class="node">Agents spécialisés + synthèse</div><div class="node h">Acheteur senior valide</div></div>
+<div class="lane"><span class="tag goldc">10 % stratégique</span><div class="node">Préparation des scénarios</div><div class="node h">Le comité décide</div></div>
+</div>
+<div class="node h red">Gros montants : validation humaine obligatoire, toutes zones</div>
+<div class="arrow">↓</div>
+<div class="node e">Agent d'évaluation : conclusion, délais, écarts de prix, avis fournisseurs</div>
+<div class="loop">↺ ajuste seuils et répartition, validé par un humain, puis retour à l'orchestrateur</div>
+</div>
+</div>
+</section>
+
+<section id="post" aria-labelledby="h-post">
+<div class="section-head"><p class="eyebrow">Post LinkedIn</p><h2 id="h-post">Le texte qui accompagne le visuel</h2></div>
+<article class="card">
+<div class="post-head"><span class="pill gold">Brouillon, non publié</span><button class="btn" id="copy-post" type="button">Copier le texte</button></div>
+<pre class="post" id="post-text">Chez Walmart, une IA négocie les contrats fournisseurs : 68 % de contrats conclus alors que l'objectif était de 20 %, et 75 % des fournisseurs préfèrent négocier avec elle, parce que c'est plus rapide.
+
+C'est impressionnant. Mais je ne confierais pas tous les contrats au même agent.
+
+Voici l'architecture que je propose :
+
+→ 01 Recevoir, 02 Qualifier : un orchestrateur classe chaque dossier par niveau de risque.
+→ 70 % faible risque : un agent négocie seul, dans des limites écrites. Un humain relit un échantillon chaque semaine.
+→ 20 % complexe : des agents juridique, finance, logistique et conformité préparent une synthèse. L'acheteur senior valide avant l'envoi.
+→ 10 % stratégique : l'IA prépare les scénarios, le comité décide.
+→ Gros montants : validation humaine obligatoire, quelle que soit la zone.
+→ Trois listes de règles : toujours faire, demander d'abord, ne jamais faire.
+→ 04 Évaluer : un agent d'évaluation mesure et propose d'ajuster les seuils. Un humain valide.
+
+Des objectifs, des limites et des règles, plutôt que le prompt parfait.
+
+Précision honnête : ce schéma est une proposition de conception, pas l'architecture de Walmart, et je n'ai pas de résultats mesurés pour lui.
+
+Et chez vous, quelle part des décisions pourrait passer en autonomie demain, avec quelles limites écrites ?
+
+Détail du schéma : https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/schema-agents-ia.md
+
+Didier Lioniello · Applied AI Architect</pre>
+</article>
+</section>
+
+<section id="limites" aria-labelledby="h-limites">
+<div class="section-head"><p class="eyebrow">Limites et honnêteté</p><h2 id="h-limites">Ce que ce livrable est, et n'est pas</h2></div>
+<div class="grid g3">
+<article class="card"><h3 class="teal">C'est</h3><p>Une proposition de conception de Didier Lioniello, Applied AI Architect : une manière de répartir l'autonomie des agents selon le risque.</p></article>
+<article class="card"><h3 class="coralc">Ce n'est pas</h3><p>L'architecture réelle de Walmart, qui n'est pas publique. Seuls les deux chiffres de départ concernent Walmart.</p></article>
+<article class="card"><h3 class="goldc">À tester</h3><p>Aucun résultat mesuré n'est revendiqué. La répartition 70 / 20 / 10 et les seuils sont des hypothèses à valider sur des données réelles.</p></article>
+</div>
+</section>
+</main>
+<footer class="shell">
+<p><strong class="sig">Didier Lioniello</strong> · Applied AI Architect · 2026</p>
+<div class="links"><a class="btn" href="https://github.com/didier-lioniello/agents-ia-entreprise">Dépôt GitHub</a><a class="btn" href="https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/README.md">README</a><a class="btn" href="https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/docs/architecture.md">Architecture</a><a class="btn" href="https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/docs/workflow.md">Flux</a><a class="btn" href="https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/docs/regles-agents.md">Règles</a><a class="btn" href="https://github.com/didier-lioniello/agents-ia-entreprise/blob/main/post-linkedin-schema.md">Post</a></div>
+</footer>
+</body>
+</html>
