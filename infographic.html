@@ -1,0 +1,85 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>
+:root{--ink:#08131f;--line:rgba(166,210,223,.16);--text:#f4fbfc;--muted:#a8bec8;--teal:#52e0c4;--teal-soft:#a7f3e5;--coral:#ff866e;--gold:#f5ca73;--blue:#6bb8ff;--danger:#ff7e8b}
+*{box-sizing:border-box;margin:0}
+html,body{width:1200px;height:1200px;overflow:hidden}
+body{color:var(--text);font-family:Inter,sans-serif;line-height:1.4;position:relative;
+background:radial-gradient(circle at 12% 8%,rgba(82,224,196,.13),transparent 420px),radial-gradient(circle at 88% 30%,rgba(107,184,255,.13),transparent 480px),linear-gradient(180deg,#08131f,#0a1724 48%,#07111b)}
+body::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+.banner{height:30px;display:flex;align-items:center;justify-content:center;color:#06211d;background:linear-gradient(90deg,var(--teal),#8ff0dd 48%,var(--gold));font-size:11px;font-weight:900;letter-spacing:.14em}
+.wrap{position:relative;padding:22px 48px 0}
+.nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.brand{display:flex;gap:12px;align-items:center;font-weight:800;font-size:17px;letter-spacing:-.02em}
+.mark{width:40px;height:40px;border-radius:12px;background:var(--teal);color:var(--ink);display:grid;place-items:center;font-size:11px;font-weight:900;box-shadow:0 10px 32px rgba(82,224,196,.25)}
+.pill{padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:#cde0e7;background:rgba(255,255,255,.035);font-size:11.5px;font-weight:700;margin-left:8px}
+.eyebrow{color:var(--teal);font-size:11.5px;font-weight:850;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.hero{display:grid;grid-template-columns:1.55fr .8fr;gap:28px;align-items:end;padding-top:26px}
+h1{font-size:58px;font-weight:760;line-height:.95;letter-spacing:-.06em}
+h1 em{font-style:normal;color:var(--teal-soft)}
+.copy{color:var(--muted);font-size:15px;margin-top:12px}
+.card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(21,46,67,.92),rgba(11,27,41,.95));box-shadow:0 28px 80px rgba(0,0,0,.28);border-radius:20px}
+.kpis{display:grid;gap:12px}
+.kpi{padding:14px 18px;position:relative}
+.kpi small{color:var(--muted);font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.kpi b{display:block;font-size:34px;letter-spacing:-.04em;line-height:1.1}
+.kpi span{color:var(--muted);font-size:12px}
+.dot{position:absolute;right:16px;top:16px;width:8px;height:8px;border-radius:50%}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.step{padding:20px 18px}
+.step .n{color:var(--teal);font-size:11px;font-weight:850;letter-spacing:.14em}
+.step b{display:block;font-size:15px;margin-top:3px;letter-spacing:-.02em}
+.step p{color:var(--muted);font-size:13px;margin-top:2px}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.zone{padding:24px 22px}
+.zone .top{display:flex;justify-content:space-between;align-items:baseline}
+.zone .pct{font-size:40px;font-weight:780;letter-spacing:-.05em}
+.zone h3{font-size:15px;letter-spacing:-.02em}
+.bar{height:6px;border-radius:9px;background:rgba(255,255,255,.08);margin:8px 0 10px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:9px}
+.zone p{color:var(--muted);font-size:14px;min-height:62px}
+.human{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:13.5px;display:flex;gap:8px}
+.human strong{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;padding-top:1px}
+.alert{margin-top:20px;padding:18px 22px;display:flex;align-items:center;gap:14px;border-color:rgba(255,134,110,.45)}
+.alert .tag{background:var(--coral);color:#2a0d07;font-size:10.5px;font-weight:900;letter-spacing:.12em;padding:6px 10px;border-radius:999px}
+.alert span{font-size:14px;font-weight:650}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.rule{padding:22px 22px}
+.rule h3{font-size:14px;display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.rule p{color:var(--muted);font-size:14px}
+.loop{margin-top:20px;padding:20px 22px;display:flex;gap:12px;align-items:center;font-size:13.5px}
+.loop b{color:var(--teal)}
+.foot{position:absolute;left:48px;right:48px;bottom:20px;display:flex;justify-content:space-between;color:var(--muted);font-size:11.5px;border-top:1px solid var(--line);padding-top:12px}
+.foot b{color:var(--text)}
+</style></head><body>
+<div class="banner">PROPOSITION DE CONCEPTION · SCHÉMA CONCEPTUEL · NON ISSU D'UN SYSTÈME WALMART</div>
+<div class="wrap">
+<div class="nav"><div class="brand"><span class="mark">AI·N</span>Négociation par agents IA</div>
+<div><span class="pill">Risque classé</span><span class="pill">Humain dans la boucle</span><span class="pill">Tout journalisé</span></div></div>
+<div class="hero"><div>
+<p class="eyebrow">Architecture de responsabilité · cas Walmart</p>
+<h1>Et si l'IA négociait vos contrats, <em>avec des garde‑fous&nbsp;?</em></h1>
+<p class="copy">Chaque dossier est classé par niveau de risque. Plus l'enjeu monte, plus l'humain reprend la main.</p></div>
+<div class="kpis">
+<div class="card kpi"><i class="dot" style="background:var(--teal)"></i><small>Contrats conclus · chez Walmart</small><b>68 %</b><span>conclus par l'IA, pour 20 % visés</span></div>
+<div class="card kpi"><i class="dot" style="background:var(--gold)"></i><small>Fournisseurs · chez Walmart</small><b>75 %</b><span>préfèrent négocier avec l'IA</span></div>
+</div></div>
+<div class="flow">
+<div class="card step"><span class="n">01 — RECEVOIR</span><b>Contrat entrant</b><p>Dossier fournisseur à traiter</p></div>
+<div class="card step"><span class="n">02 — QUALIFIER</span><b>Agent orchestrateur</b><p>Classe chaque dossier par risque</p></div>
+<div class="card step"><span class="n">03 — NÉGOCIER</span><b>Agent adapté</b><p>Selon la zone de risque</p></div>
+<div class="card step"><span class="n">04 — ÉVALUER</span><b>Agent d'évaluation</b><p>Mesure les résultats</p></div>
+</div>
+<div class="zones">
+<div class="card zone"><div class="top"><h3>Faible risque</h3><span class="pct" style="color:var(--teal)">70 %</span></div><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--teal),var(--teal-soft))"></i></div><p>Contrats standard, petits montants. Un agent négocie seul dans des limites écrites.</p><div class="human"><strong style="color:var(--teal)">Humain</strong><span>relit un échantillon chaque semaine</span></div></div>
+<div class="card zone"><div class="top"><h3>Complexe, inter-services</h3><span class="pct" style="color:var(--blue)">20 %</span></div><div class="bar"><i style="width:20%;background:var(--blue)"></i></div><p>Agents juridique, finance, logistique et conformité, puis une synthèse.</p><div class="human"><strong style="color:var(--blue)">Humain</strong><span>l'acheteur senior valide avant l'envoi</span></div></div>
+<div class="card zone"><div class="top"><h3>Stratégique</h3><span class="pct" style="color:var(--gold)">10 %</span></div><div class="bar"><i style="width:10%;background:var(--gold)"></i></div><p>L'IA prépare les scénarios et simule. Elle ne décide pas.</p><div class="human"><strong style="color:var(--gold)">Humain</strong><span>le comité décide</span></div></div>
+</div>
+<div class="card alert"><span class="tag">CONTRÔLE HUMAIN</span><span>Gros montants : validation humaine obligatoire, quelle que soit la zone.</span></div>
+<div class="rules">
+<div class="card rule"><h3><span style="color:var(--teal)">●</span>Toujours faire</h3><p>Tout journaliser. Rester dans le mandat. Citer la clause source.</p></div>
+<div class="card rule"><h3><span style="color:var(--gold)">●</span>Demander d'abord</h3><p>Concession hors grille, nouvelle clause, montant au-dessus du seuil.</p></div>
+<div class="card rule"><h3><span style="color:var(--danger)">●</span>Ne jamais faire</h3><p>Signer seul un accord stratégique, modifier sans trace, contourner une limite.</p></div>
+</div>
+<div class="card loop"><b>↻ Boucle d'amélioration</b><span>L'agent d'évaluation mesure et propose d'ajuster les seuils. Un humain valide.</span></div>
+</div>
+<div class="foot"><span>Schéma conceptuel — proposition de conception, non issu d'un système Walmart.</span><b>Didier Lioniello · Applied AI Architect</b></div>
+</body></html>
